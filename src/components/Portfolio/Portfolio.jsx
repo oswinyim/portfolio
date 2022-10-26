@@ -25,6 +25,16 @@ const portfolios = [
     },
   },
   {
+    name: "Modern login form design",
+    img: MODERN_LOGIN,
+    skill: "React JS, HTML",
+    code: {
+      name: "Github",
+      href: "https://github.com/oswinyim/modern-login-page",
+    },
+    demo: { name: "Demo", href: "https://modern-login-page.vercel.app/" },
+  },
+  {
     name: "Sign in & Sign up with firebase",
     img: LOGIN_WITH_FIREBASE_IMG,
     skill: "React JS, Customer Hook",
@@ -36,16 +46,6 @@ const portfolios = [
       name: "Demo",
       href: " https://simple-react-auth-with-firebase-two.vercel.app/",
     },
-  },
-  {
-    name: "Modern login form design",
-    img: MODERN_LOGIN,
-    skill: "React JS, HTML",
-    code: {
-      name: "Github",
-      href: "https://github.com/oswinyim/modern-login-page",
-    },
-    demo: { name: "Demo", href: "https://modern-login-page.vercel.app/" },
   },
 ];
 const Portfolio = () => {
