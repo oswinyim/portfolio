@@ -1,0 +1,17 @@
+.special-title::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+  animation: blinkCursor 1s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes blinkCursor {
+  0% {
+    background: var(--color-primary);
+  }
+  50% {
+    background: transparent;
+  }
+}
