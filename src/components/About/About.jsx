@@ -2,6 +2,7 @@ import "./About.css";
 import ME from "../../assets/me-about.jpeg";
 import { FaAward, FaUsers } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
+import { VscFolderLibrary } from "react-icons/vsc";
 
 const About = () => {
   return (
@@ -23,7 +24,11 @@ const About = () => {
                 <h5>Experience</h5>
                 <small>2 Years Working</small>
               </article>
-
+              <article className="about__card">
+                <VscFolderLibrary className="about__icon" />
+                <h5>Projects</h5>
+                <small>10+</small>
+              </article>
               <article className="about__card">
                 <FaUsers className="about__icon" />
                 <h5>Education</h5>

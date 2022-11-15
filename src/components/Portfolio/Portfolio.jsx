@@ -3,8 +3,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./Portfolio.css";
-import LOGIN_WITH_FIREBASE_IMG from "../../assets/simple-login-with-firebase.png";
-import MODERN_LOGIN from "../../assets/modern-login-form.png";
+import QR_CODE_COMPONENT_IMG from "../../assets/qr-code-component.png";
+import PRODUCT_PREVIEW_CARD_GIF_IMG from "../../assets/product-preview-card.gif";
+
+import MODERN_LOGIN_IMG from "../../assets/modern-login.png";
 import AIRBNB_CLONE_IMG from "../../assets/airbnb-clone.gif";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,33 +22,69 @@ const portfolios = [
       href: "https://github.com/oswinyim/airbnb-clone",
     },
     demo: {
-      name: "Demo",
+      name: "Live",
       href: "https://airbnb-clone-self-eight.vercel.app/",
     },
   },
   {
-    name: "Modern login form design",
-    img: MODERN_LOGIN,
-    skill: "React JS, HTML",
+    name: "Modern login",
+    img: MODERN_LOGIN_IMG,
+    skill: "React JS,Custom Hook(useHttp) ,useContext,Firebase",
     code: {
       name: "Github",
-      href: "https://github.com/oswinyim/modern-login-page",
+      href: "https://github.com/oswinyim/modern-firebase-login",
     },
-    demo: { name: "Demo", href: "https://modern-login-page.vercel.app/" },
+    demo: { name: "Live", href: "https://modern-firebase-login.vercel.app/" },
   },
   {
-    name: "Sign in & Sign up with firebase",
-    img: LOGIN_WITH_FIREBASE_IMG,
-    skill: "React JS, Customer Hook",
+    name: "Product preview card",
+    img: PRODUCT_PREVIEW_CARD_GIF_IMG,
+    skill: "CSS Grid, Flexbox, Mobile-first workflow, Styled Components",
     code: {
       name: "Github",
-      href: "https://github.com/oswinyim/simple-react-auth-with-firebase",
+      href: "https://github.com/oswinyim/product-preview-card-component-main",
     },
     demo: {
-      name: "Demo",
-      href: " https://simple-react-auth-with-firebase-two.vercel.app/",
+      name: "Live",
+      href: "https://product-preview-card-component-main-oswinyim.vercel.app/",
     },
   },
+  {
+    name: "QR code component",
+    img: QR_CODE_COMPONENT_IMG,
+    skill: "CSS Grid, Mobile-first workflow, Styled Components",
+    code: {
+      name: "Github",
+      href: "https://github.com/oswinyim/qr-code-component",
+    },
+    demo: {
+      name: "Live",
+      href: "https://qr-code-component-du1xvt9h5-oswinyim.vercel.app/",
+    },
+  },
+  // {
+  //   name: "Modern login form design",
+  //   img: MODERN_LOGIN,
+  //   skill: "React JS, HTML",
+  //   code: {
+  //     name: "Github",
+  //     href: "https://github.com/oswinyim/modern-login-page",
+  //   },
+  //   demo: { name: "Live", href: "https://modern-login-page.vercel.app/" },
+  // },
+  // {
+  //   name: "Sign in & Sign up with firebase",
+  //   img: LOGIN_WITH_FIREBASE_IMG,
+  //   skill: "React JS, Customer Hook",
+  //   code: {
+  //     name: "Github",
+  //     href: "https://github.com/oswinyim/simple-react-auth-with-firebase",
+  //   },
+  //   demo: {
+  //     name: "Live",
+  //     href: " https://simple-react-auth-with-firebase-two.vercel.app/",
+  //   },
+  // },
 ];
 const Portfolio = () => {
   return (
@@ -58,7 +96,7 @@ const Portfolio = () => {
           return (
             <article className="portfolio__item" key={index}>
               <div className="portfolio__item-image">
-                <img src={portfolio.img} alt="" />
+                <img src={portfolio.img} alt="" style={{ fontSiz: "10p" }} />
               </div>
               <h3>{portfolio.name}</h3>
               <h3 className="text-light">{portfolio.skill}</h3>

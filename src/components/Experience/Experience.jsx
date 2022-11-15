@@ -73,6 +73,38 @@ const Experience = () => {
             </article>
           </div>
         </div>
+        <div className="experience__backend">
+          <h3>Other</h3>
+          <div className="experience__content">
+            <article className="experience__details">
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>JIRA</h4>
+                <small>Proficient</small>
+              </div>
+            </article>
+            <article className="experience__details">
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>JavaScript</h4>
+                <small>Proficient</small>
+              </div>
+            </article>
+            <article className="experience__details">
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Git / GitHub</h4>
+                <small>Experienced</small>
+              </div>
+            </article>
+            <article className="experience__details">
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Responsive Web Design</h4>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   );
