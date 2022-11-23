@@ -1,6 +1,5 @@
 import CvContactMe from "./CvContactMe";
 import "./Header.css";
-import me from "../../assets/oswin.png";
 import Socials from "./Socials";
 import SpecialTitle from "./SpecialTitle";
 import LOGO from "../../assets/logo.png";
@@ -11,7 +10,7 @@ const Header = () => {
       <div className="container header__container">
         <h3>Hello I'm</h3>
         <h1>Oswin Yim</h1>
-        <img className="logo" src={LOGO} alt="Oswin" href=""/>
+        <img className="logo" src={LOGO} alt="Oswin" href="" />
         <SpecialTitle
           className="text-light"
           titles={[
@@ -23,9 +22,6 @@ const Header = () => {
         />
         <CvContactMe />
         <Socials />
-        <div className="me">
-          <img src={me} alt="me" />
-        </div>
         <a href="#contact" className="scroll__down">
           Contact Me
         </a>

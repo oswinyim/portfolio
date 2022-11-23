@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+.imgWrapper {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  border-radius: 30rem 12rem;
+  overflow: hidden;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  display: inline-block;
+}
+
+.imgWrapper img {
+  width: 100%;
+  display: inline-block;
+  object-fit: cover;
+}

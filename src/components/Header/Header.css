@@ -1,5 +1,4 @@
 header {
-  height: 140vh;
   padding-top: 7rem;
   overflow: hidden;
 }
@@ -27,18 +26,6 @@ header {
   bottom: 0;
 }
 
-.me {
-  background: linear-gradient(var(--color-primary), transparent);
-  width: 22rem;
-  height: 30rem;
-  position: absolute;
-  left: calc(50% - 11rem);
-  margin-top: 4rem;
-  border-radius: 30rem 12rem;
-  overflow: hidden;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
-}
-
 .scroll__down {
   position: absolute;
   right: -2.3rem;
@@ -55,12 +42,6 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  .me {
-    height: 22rem;
-    border-radius: 30rem 12rem;
-    padding: 3rem;
-  }
-
   .socials,
   .scroll__down {
     display: none;

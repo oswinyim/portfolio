@@ -9,6 +9,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import AnimatedCursor from "react-animated-cursor";
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import ImgMe from "./components/ImgMe/ImgMe";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
       />
       <ScrollAnimation animateIn="animate__fadeIn">
         <Header />
+        <ImgMe />
       </ScrollAnimation>
       <Nav />
       <ScrollAnimation animateIn="animate__fadeIn">
