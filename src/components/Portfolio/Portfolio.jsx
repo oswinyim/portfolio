@@ -5,9 +5,9 @@ import "swiper/css/scrollbar";
 import "./Portfolio.css";
 import QR_CODE_COMPONENT_IMG from "../../assets/qr-code-component.png";
 import PRODUCT_PREVIEW_CARD_GIF_IMG from "../../assets/product-preview-card.gif";
-
 import MODERN_LOGIN_IMG from "../../assets/modern-login.png";
 import AIRBNB_CLONE_IMG from "../../assets/airbnb-clone.gif";
+import INTERACTIVE_RATING_IMG from "../../assets/interactive-rating.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
@@ -62,29 +62,20 @@ const portfolios = [
       href: "https://qr-code-component-du1xvt9h5-oswinyim.vercel.app/",
     },
   },
-  // {
-  //   name: "Modern login form design",
-  //   img: MODERN_LOGIN,
-  //   skill: "React JS, HTML",
-  //   code: {
-  //     name: "Github",
-  //     href: "https://github.com/oswinyim/modern-login-page",
-  //   },
-  //   demo: { name: "Live", href: "https://modern-login-page.vercel.app/" },
-  // },
-  // {
-  //   name: "Sign in & Sign up with firebase",
-  //   img: LOGIN_WITH_FIREBASE_IMG,
-  //   skill: "React JS, Customer Hook",
-  //   code: {
-  //     name: "Github",
-  //     href: "https://github.com/oswinyim/simple-react-auth-with-firebase",
-  //   },
-  //   demo: {
-  //     name: "Live",
-  //     href: " https://simple-react-auth-with-firebase-two.vercel.app/",
-  //   },
-  // },
+  {
+    name: "Interactive rating component",
+    img: INTERACTIVE_RATING_IMG,
+    skill:
+      "CSS Grid, Mobile-first workflow, Event delegation, Styled Components",
+    code: {
+      name: "Github",
+      href: "https://github.com/oswinyim/interactive-rating-component-main",
+    },
+    demo: {
+      name: "Live",
+      href: "https://interactive-rating-component-main-ashy.vercel.app/",
+    },
+  },
 ];
 const Portfolio = () => {
   return (
