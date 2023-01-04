@@ -10,6 +10,7 @@ import AnimatedCursor from "react-animated-cursor";
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import ImgMe from "./components/ImgMe/ImgMe";
+import CodingLogoCanvas from "./components/CodingLogoCanvas/CodingLogoCanvas";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           backgroundColor: "var(--color-bg-variant)",
         }}
       />
+      <CodingLogoCanvas />
       <ScrollAnimation animateIn="animate__fadeIn">
         <Header />
         <ImgMe />

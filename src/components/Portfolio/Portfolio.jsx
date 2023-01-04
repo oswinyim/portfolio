@@ -8,11 +8,31 @@ import PRODUCT_PREVIEW_CARD_GIF_IMG from "../../assets/product-preview-card.gif"
 import MODERN_LOGIN_IMG from "../../assets/modern-login.png";
 import AIRBNB_CLONE_IMG from "../../assets/airbnb-clone.gif";
 import INTERACTIVE_RATING_IMG from "../../assets/interactive-rating.png";
+import ADMIN_PANEL_IMG from "../../assets/admin-dashboard.gif";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
 
 const portfolios = [
+  {
+    name: "Admin Dashboard",
+    img: ADMIN_PANEL_IMG,
+    skill: "React JS, Redux, Express JS, Node JS, MongoDB, Material UI",
+    code: [
+      {
+        name: "Github - Frontend",
+        href: "https://github.com/oswinyim/admin-panel-frontend",
+      },
+      {
+        name: "Github - Backend",
+        href: "https://github.com/oswinyim/admin-panel-backend",
+      },
+    ],
+    demo: {
+      name: "Live",
+      href: "https://admin-panel-frontend-umber.vercel.app/dashboard",
+    },
+  },
   {
     name: "Airbnb Clone",
     img: AIRBNB_CLONE_IMG,
@@ -23,11 +43,11 @@ const portfolios = [
     },
     demo: {
       name: "Live",
-      href: "https://airbnb-clone-self-eight.vercel.app/",
+      href: "https://oswinyim-airbnb-clone.vercel.app/",
     },
   },
   {
-    name: "Modern login",
+    name: "Modern Login",
     img: MODERN_LOGIN_IMG,
     skill: "React JS,Custom Hook(useHttp) ,useContext,Firebase",
     code: {
@@ -37,7 +57,7 @@ const portfolios = [
     demo: { name: "Live", href: "https://modern-firebase-login.vercel.app/" },
   },
   {
-    name: "Product preview card",
+    name: "Product Preview Card",
     img: PRODUCT_PREVIEW_CARD_GIF_IMG,
     skill: "CSS Grid, Flexbox, Mobile-first workflow, Styled Components",
     code: {
@@ -50,7 +70,7 @@ const portfolios = [
     },
   },
   {
-    name: "QR code component",
+    name: "QR Code Component",
     img: QR_CODE_COMPONENT_IMG,
     skill: "CSS Grid, Mobile-first workflow, Styled Components",
     code: {
@@ -63,7 +83,7 @@ const portfolios = [
     },
   },
   {
-    name: "Interactive rating component",
+    name: "Interactive Rating Component",
     img: INTERACTIVE_RATING_IMG,
     skill:
       "CSS Grid, Mobile-first workflow, Event delegation, Styled Components",
@@ -83,30 +103,46 @@ const Portfolio = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
       <div className="container portfolio__container">
-        {portfolios.map((portfolio, index) => {
+        {portfolios.map(({ img, skill, name, code, demo }, index) => {
           return (
             <article className="portfolio__item" key={index}>
               <div className="portfolio__item-image">
-                <img src={portfolio.img} alt="" style={{ fontSiz: "10p" }} />
+                <img src={img} alt="" style={{ fontSiz: "10p" }} />
               </div>
-              <h3>{portfolio.name}</h3>
-              <h3 className="text-light">{portfolio.skill}</h3>
+              <h3>{name}</h3>
+              <h3 className="text-light">{skill}</h3>
               <div className="portfolio__item-cta">
+                {Array.isArray(code) ? (
+                  code.map((data) => {
+                    return (
+                      <a
+                        href={data.href}
+                        rel="noopener noreferrer"
+                        className="btn"
+                        target="_blank"
+                      >
+                        {data.name}
+                      </a>
+                    );
+                  })
+                ) : (
+                  <a
+                    href={code.href}
+                    rel="noopener noreferrer"
+                    className="btn"
+                    target="_blank"
+                  >
+                    {code.name}
+                  </a>
+                )}
+
                 <a
-                  href={portfolio.code.href}
-                  rel="noopener noreferrer"
-                  className="btn"
-                  target="_blank"
-                >
-                  {portfolio.code.name}
-                </a>
-                <a
-                  href={portfolio.demo.href}
+                  href={demo.href}
                   className="btn btn-primary"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <span>{portfolio.demo.name}</span>
+                  <span>{demo.name}</span>
                 </a>
               </div>
             </article>

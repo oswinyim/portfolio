@@ -3,7 +3,6 @@ import "./Header.css";
 import Socials from "./Socials";
 import SpecialTitle from "./SpecialTitle";
 import LOGO from "../../assets/logo.png";
-
 const Header = () => {
   return (
     <header>
@@ -16,7 +15,7 @@ const Header = () => {
           titles={[
             "Frontend Developer",
             "Web Developer",
-            // "Junior Full Stack Developer",
+            "Full Stack Developer",
             "Software Developer",
           ]}
         />
