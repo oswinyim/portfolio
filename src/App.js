@@ -1,54 +1,16 @@
-import { Fragment } from "react";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import Experience from "./components/Experience/Experience";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import Nav from "./components/Nav/Nav";
-import Portfolio from "./components/Portfolio/Portfolio";
-import AnimatedCursor from "react-animated-cursor";
-import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
-import ImgMe from "./components/ImgMe/ImgMe";
-import CodingLogoCanvas from "./components/CodingLogoCanvas/CodingLogoCanvas";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 const App = () => {
   return (
-    <Fragment>
-      <AnimatedCursor
-        innerSize={8}
-        outerSize={8}
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={3}
-        outerStyle={{
-          border: "5px solid var(--color-primary)",
-        }}
-        innerStyle={{
-          backgroundColor: "var(--color-bg-variant)",
-        }}
-      />
-      <CodingLogoCanvas />
-      <ScrollAnimation animateIn="animate__fadeIn">
-        <Header />
-        <ImgMe />
-      </ScrollAnimation>
-      <Nav />
-      <ScrollAnimation animateIn="animate__fadeIn">
-        <About />
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="animate__fadeInUp">
-        <Experience />
-      </ScrollAnimation>
-      {/* <Services /> */}
-      <ScrollAnimation animateIn="animate__fadeInTopLeft">
-        <Portfolio />
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="animate__lightSpeedInRight">
-        <Contact />
-      </ScrollAnimation>
-      <Footer />
-    </Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home isHK={false} />} />
+        <Route path="/ca" element={<Home isHK={false} />} />
+        <Route path="/hk" element={<Home isHK={true} />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

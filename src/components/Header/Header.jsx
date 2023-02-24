@@ -3,7 +3,7 @@ import "./Header.css";
 import Socials from "./Socials";
 import SpecialTitle from "./SpecialTitle";
 import LOGO from "../../assets/logo.png";
-const Header = () => {
+const Header = ({isHK}) => {
   return (
     <header>
       <div className="container header__container">
@@ -19,7 +19,7 @@ const Header = () => {
             "Software Developer",
           ]}
         />
-        <CvContactMe />
+        <CvContactMe isHK={isHK}/>
         <Socials />
         <a href="#contact" className="scroll__down">
           Contact Me

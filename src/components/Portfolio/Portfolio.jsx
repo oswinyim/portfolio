@@ -107,10 +107,65 @@ const Portfolio = () => {
           return (
             <article className="portfolio__item" key={index}>
               <div className="portfolio__item-image">
-                <img src={img} alt="" style={{ fontSiz: "10p" }} />
+                <img src={img} alt="" />
               </div>
               <h3>{name}</h3>
               <h3 className="text-light">{skill}</h3>
+                <div className="portfolio__item-cta">
+                  {Array.isArray(code) ? (
+                    code.map(({href,name}) => {
+                      return (
+                        <a
+                          href={href}
+                          rel="noopener noreferrer"
+                          className="btn"
+                          target="_blank"
+                          key={name}
+                        >
+                          {name}
+                        </a>
+                      );
+                    })
+                  ) : (
+                    <a
+                      href={code.href}
+                      rel="noopener noreferrer"
+                      className="btn"
+                      target="_blank"
+                    >
+                      {code.name}
+                    </a>
+                  )}
+
+                  <a
+                    href={demo.href}
+                    className="btn btn-primary"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span>{demo.name}</span>
+                  </a>
+                </div>
+            </article>
+          );
+        })}
+      </div>
+      <Swiper
+        modules={[Navigation, Pagination, A11y]}
+        spaceBetween={40}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        className="portfolio__container-mobile container"
+      >
+        {portfolios.map(({ img, skill, name, code, demo }, index) => {
+          return (
+            <SwiperSlide className="portfolio__item" key={index}>
+              <div className="portfolio__item-image">
+                <img src={img} alt="" />
+              </div>
+              <h3>This is a portfolio item title</h3>
               <div className="portfolio__item-cta">
                 {Array.isArray(code) ? (
                   code.map((data) => {
@@ -120,6 +175,7 @@ const Portfolio = () => {
                         rel="noopener noreferrer"
                         className="btn"
                         target="_blank"
+                        key={data.href}
                       >
                         {data.name}
                       </a>
@@ -135,7 +191,6 @@ const Portfolio = () => {
                     {code.name}
                   </a>
                 )}
-
                 <a
                   href={demo.href}
                   className="btn btn-primary"
@@ -143,44 +198,6 @@ const Portfolio = () => {
                   target="_blank"
                 >
                   <span>{demo.name}</span>
-                </a>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-      <Swiper
-        modules={[Navigation, Pagination, A11y]}
-        spaceBetween={40}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        className="portfolio__container-mobile container"
-      >
-        {portfolios.map((portfolio, index) => {
-          return (
-            <SwiperSlide className="portfolio__item" key={index}>
-              <div className="portfolio__item-image">
-                <img src={portfolio.img} alt="" />
-              </div>
-              <h3>This is a portfolio item title</h3>
-              <div className="portfolio__item-cta">
-                <a
-                  href={portfolio.code.href}
-                  rel="noopener noreferrer"
-                  className="btn"
-                  target="_blank"
-                >
-                  {portfolio.code.name}
-                </a>
-                <a
-                  href={portfolio.demo.href}
-                  className="btn btn-primary"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <span>{portfolio.demo.name}</span>
                 </a>
               </div>
             </SwiperSlide>

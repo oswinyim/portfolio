@@ -5,7 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact = ({ isHK }) => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,7 +18,8 @@ const Contact = () => {
     );
     e.target.reset();
   };
-
+  const phoneCountryCode = isHK ? "852" : "1";
+  const tel = isHK ? "67341996" : "6478709789";
   return (
     <section id="contact">
       <h5>Email to me easily</h5>
@@ -40,9 +41,9 @@ const Contact = () => {
           <article className="contact__option">
             <BsWhatsapp className="contact__option-icon" />
             <h4>Whatsapp</h4>
-            <h5>+16478709789</h5>
+            <h5>+{phoneCountryCode} {tel}</h5>
             <a
-              href="https://api.whatsapp.com/send?phone=16478709789"
+              href={`https://api.whatsapp.com/send?phone=${phoneCountryCode}${tel}`}
               rel="noreferrer"
               target="_blank"
             >
@@ -52,9 +53,9 @@ const Contact = () => {
           <article className="contact__option">
             <BiPhoneCall className="contact__option-icon" />
             <h4>Phone</h4>
-            <h5>+16478709789</h5>
+            <h5>+{phoneCountryCode} {tel}</h5>
             <a
-              href="tel:+16478709789"
+              href={`tel:+${phoneCountryCode}${tel}`}
               rel="noreferrer"
               target="_blank"
             >
