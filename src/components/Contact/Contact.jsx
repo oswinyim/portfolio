@@ -19,7 +19,7 @@ const Contact = ({ isHK }) => {
     e.target.reset();
   };
   const phoneCountryCode = isHK ? "852" : "1";
-  const tel = isHK ? "67341996" : "6478709789";
+  const tel = isHK ? "96869665" : "6478709789";
   return (
     <section id="contact">
       <h5>Email to me easily</h5>

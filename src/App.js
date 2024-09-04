@@ -5,8 +5,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home isHK={false} />} />
-        <Route path="/ca" element={<Home isHK={false} />} />
+        <Route path="/" element={<Home isHK={true} />} />
+        {/* <Route path="/ca" element={<Home isHK={true} />} /> */}
         <Route path="/hk" element={<Home isHK={true} />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
